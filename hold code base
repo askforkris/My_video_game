@@ -1,0 +1,8 @@
+# Use a list to hold multiple treasure objects
+treasures = [pygame.Rect(100, 100, 30, 30), pygame.Rect(200, 200, 30, 30)]
+
+# Use a loop to check collision with all of them
+for t in treasures[:]: # Iterate over a copy
+    if player_rect.colliderect(t):
+        treasures.remove(t)
+        # Apply your reward logic here
