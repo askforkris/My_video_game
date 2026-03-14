@@ -1,0 +1,21 @@
+# My_video_game
+
+## Overview
+A secure, economy-focused video game project. 
+
+## Privacy Policy
+- **No Personal Data:** We do not store or share the physical locations of our developers.
+- **Security:** All sensitive configurations are stored in environment variables.
+
+## Project Roadmap
+1. **Core Economy:** Implementation of the treasure-to-money conversion logic.
+2. **Contributor Shares:** Establishing a 0-100% split for all revenue-generating assets.
+3. **Beta Launch:** Secure testing via private builds.
+
+## How to Contribute
+1. Check the **Issues** tab for open tasks.
+2. Read `CONTRIBUTING.md` for revenue share details.
+3. Submit a Pull Request!
+
+## License
+MIT License - See [LICENSE](LICENSE) for details.
