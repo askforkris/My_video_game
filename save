@@ -1,0 +1,14 @@
+import json
+
+def save_game(balance, player_id):
+    data = {"player_id": player_id, "balance": balance}
+    with open("save_data.json", "w") as f:
+        json.dump(data, f)
+    print("Game saved securely.")
+
+def load_game():
+    try:
+        with open("save_data.json", "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"player_id": "New_Player", "balance": 500}
