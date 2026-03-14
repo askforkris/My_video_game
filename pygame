@@ -1,0 +1,33 @@
+import pygame
+import game_economy  # Your logic script
+
+# Initialize Pygame
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+clock = pygame.time.Clock()
+
+# Game State
+player_balance = 500
+treasure_found = 0
+
+running = True
+while running:
+    # 1. Event Handling (Input)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        
+        # Trigger treasure collection
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            treasure_found = 100 
+            # Apply your logic here
+            player_balance += game_economy.calculate_realized_money(treasure_found, player_balance)
+
+    # 2. Update Logic & Drawing
+    screen.fill((0, 0, 0)) # Clear screen
+    # Draw your HUD here to show balance
+    pygame.display.flip()
+    
+    clock.tick(60) # Keep game at 60 FPS
+
+pygame.quit()
