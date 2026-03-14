@@ -1,0 +1,17 @@
+# --- Sensitive Configuration ---
+.env
+config.json
+secret_keys.py
+local_settings.py
+
+# --- Environment & OS ---
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+
+# --- Database & Logs ---
+*.log
+*.db
+*.sqlite3
