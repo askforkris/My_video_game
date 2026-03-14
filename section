@@ -1,0 +1,14 @@
+# 1. Define your objects as rectangles
+player_rect = pygame.Rect(x, y, 50, 50)
+treasure_rect = pygame.Rect(600, 400, 30, 30) # Fixed position for a treasure
+
+# 2. Check for collision
+if player_rect.colliderect(treasure_rect):
+    print("Treasure collected!")
+    treasure_value = 100
+    # Call your math script
+    player_balance += game_economy.calculate_realized_money(treasure_value, player_balance)
+    
+    # Move treasure to a new random location
+    treasure_rect.x = random.randint(0, 750)
+    treasure_rect.y = random.randint(0, 550)
